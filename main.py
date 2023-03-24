@@ -62,7 +62,6 @@ def order_coffee():
         for keys, value in used_inventory.items():
           resources[keys] -= value
         global overall_income
-        print(f"The overall income is {overall_income}")
         overall_income += cost
         print(f"Enjoy your warm cup of ☕︎ {ordered_drink}")
         print(f"Here is your change ${change_avaialbe}")
