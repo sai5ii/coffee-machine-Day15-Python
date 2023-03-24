@@ -38,12 +38,12 @@ def order_coffee():
 
     total_money = round((quarters_inserted + dimes_inserted +
                          nickels_inserted + pennies_inserted), 2)
-    change_avaialbe = round((total_money - cost), 2)
+    change_availabe = round((total_money - cost), 2)
     brew_coffee = False
     out_of_resources = []
     used_inventory = {}
  
-    if change_avaialbe < 0:
+    if change_availabe < 0:
         print(f"Sorry , not enough money to order {ordered_drink}")
         return
 
@@ -64,7 +64,7 @@ def order_coffee():
         global overall_income
         overall_income += cost
         print(f"Enjoy your warm cup of ☕︎ {ordered_drink}")
-        print(f"Here is your change ${change_avaialbe}")
+        print(f"Here is your change ${change_availabe}")
         resources.update({'money': overall_income})
         
     else:
